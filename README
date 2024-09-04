@@ -1,0 +1,36 @@
+2024/09/03
+
+This module contains a series of wrappers for time series analysis work,
+specifically for wavelet transforms (continuous (CWT) and cross (XWT), and for
+calculating periodograms with red noise and confidence level lines.
+
+The wavelet transform functionality is based on pycwt with some modifications to
+improve functionality or agreement with the literature.
+<https://github.com/regeirk/pycwt>
+
+The periodogram functionality is based on the RedNoise_ConfidenceLevels Matlab
+scripts.
+<https://www.mathworks.com/matlabcentral/fileexchange/45539-rednoise_confidencelevels>
+
+This directory contains an example Python script (example.py) that shows the
+functionality of the included scripts. The tsaw directory contains tsaw.py,
+which contains wrapper functions for pycwt, general helper functions, functions
+for calculating periodograms and the related red noise and confidence levels,
+and plotting functions.
+
+The important functions are demonstrated in the example.py script. Specifically,
+these include the cwt(), xwt(), plot_wt(), pdgram(), plot_pdgram(), and
+detrend() functions.
+
+To run this module, place a copy of the [tsaw] directory on the same path as
+your python script and do 'import tsaw'. 
+
+The plotting functions can be used as templates to create customized plots (e.g.
+to create combined periodogram-CWT plots, to tile many XWT plots). 
+
+DEPENDENCIES:
+numpy
+pandas
+matplotlib
+scipy
+spectrum
