@@ -41,7 +41,7 @@ def detrend(t, x):
 #          array of frequencies for wavelet transforms [freqs_in]
 def	get_timing(t, T_end):
 	dt = t[1] - t[0]
-	T_start = 2 / dt # Nyquist period
+	T_start = 2 * dt # Nyquist period
 	wv = wavelet.Morlet(6) # use Morlet wavelet with w0 = 6 
 	if T_end < 0:
 		T_end = get_max_T(len(t), wavelet.Morlet(6), dt)
